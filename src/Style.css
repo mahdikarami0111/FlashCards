@@ -1,0 +1,71 @@
+*{
+  font-family: 'Edu QLD Beginner', cursive;
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 90vw;
+  background-image: url("orange-world-map.svg.hi.png");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: 50% 100%;
+  align-items: center;
+}
+
+.title{
+  font-size: 300%;
+  font-weight: bolder;
+}
+
+#cards{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 33% 33% 33%;
+  column-gap: 5%;
+  row-gap: 3%;
+  width: 35%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  transition: all ease-in 1s;
+  transform-style: preserve-3d;
+}
+
+.front, .back, .mid{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 140%;
+
+}
+
+.front {
+  background-color: #264653;
+  color: white;
+  z-index: 3;
+  backface-visibility: hidden;
+}
+
+.mid{
+  z-index: 2;
+}
+
+.back {
+  background-color: #2A9D8F;
+  color: white;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
